@@ -1,0 +1,20 @@
+[
+    {
+        "category_id": "01",
+        "title": "Sports Bike",
+        "img": "https://i.ibb.co/0CWMR5P/card-sports-bike.webp",
+        "description": "We offer you the best quality low cost sports bike.We offer you the best quality low cost sports bike at the best price"
+    },
+    {
+        "category_id": "02",
+        "title": "Naked Bike",
+        "img": "https: //i.ibb.co/vms63Sj/card-naked-bike.webp",
+        "description": "We offer you the best quality low cost Naked bike.We offer you the best quality low cost sports bike at the best price"
+    },
+    {
+        "category_id": "03",
+        "title": "Cruiser Bike",
+        "img": "https://i.ibb.co/j5CkXPF/cruser-bike-card.jpg",
+        "description": "We offer you the best quality low cost Cruiser bike.We offer you the best quality low cost Cruiser bike at the best price"
+    }
+]
