@@ -1,0 +1,75 @@
+[
+    "// https://cellbazaar.com/",
+    {
+        "category_id": "01",
+        "title": "Ducati Panigale",
+        "img": "https://i.ibb.co/0CWMR5P/card-sports-bike.webp",
+        "seller": "Mahin Munir",
+        "published_date": "29 may, 2022",
+        "original_price": "2700",
+        "resale_price": "2000",
+        "used": "2 years",
+        "location": "Khalishpur in Khulna City (Bangladesh)",
+        "description": "Dayang Runner Bullet 100cc motorcycle ... Barisal er number ... 10 years papers kora (2014-2024) porjontto...self & kick start 2tai Hoi .... Digital number & smart card ace.... name change kora jabe ... 1 liter Tel a 55 km jai.... Call me"
+    },
+    {
+        "category_id": "01",
+        "title": "RC Monster.",
+        "img": "https://i.ibb.co/QKNB29Q/sports-banner.jpg",
+        "seller": "Kalide Hassan",
+        "published_date": "9 july ,2022",
+        "original_price": "3000",
+        "resale_price": "2500",
+        "used": "3 years",
+        "location": "Khalishpur in Dhake City (Bangladesh)",
+        "description": "Bike full fresh, time to time parts changed to ensure proper maintenance. Engine untouched. New exide stalk battery installed one month ago."
+    },
+    {
+        "category_id": "02",
+        "title": "Ducati Multistrada V2",
+        "img": "https://i.ibb.co/0y7cFnP/naked-banner.jpg",
+        "seller": "Raju Ahmed",
+        "published_date": "30 october ,2021",
+        "original_price": "3000",
+        "resale_price": "2000",
+        "used": "1 years",
+        "location": "Noakhali in Chittagong Division (Bangladesh)",
+        "description": "Registration complete, tax/token cleared till 25/08/2025. No litigation. Completely finished. Interested candidates can contact. Along with accessories, you will get rider's accessories worth 5/6 thousand rupees (free). Contact: Raju Ahmed, Basurhat, Companyganj, Noakhali. "
+    },
+    {
+        "category_id": "02",
+        "title": "Ducati Multistrada V3",
+        "img": "https://i.ibb.co/LYPDphf/naked-bike-2.jpg",
+        "seller": "Shohel Ahmed",
+        "published_date": "30 october ,2022",
+        "original_price": "4000",
+        "resale_price": "3000",
+        "used": "1 years",
+        "location": "Noakhali in Chittagong Division (Bangladesh)",
+        "description": "Bike full fresh, time to time parts changed to ensure proper maintenance. Engine untouched. New exide stalk battery installed one month ago. "
+    },
+    {
+        "category_id": "03",
+        "title": "Jawa Perak",
+        "img": "https://i.ibb.co/j5CkXPF/cruser-bike-card.jpg",
+        "seller": "Tajul Ahmed",
+        "published_date": "30 May ,2022",
+        "original_price": "4000",
+        "resale_price": "3000",
+        "used": "1 years",
+        "location": "Bandarban in Chittagong Division (Bangladesh)",
+        "description": "Selling my 2019 Clean Raptor 700 SE Red,, Runs great, street tires and rims, mud tires and rims, nice pipe and chip, lots of power, and well kept. My bike is working perfectly"
+    },
+    {
+        "category_id": "03",
+        "title": "Harley-Davidson 2022",
+        "img": "https://i.ibb.co/hmD90D4/croud-banner.jpg",
+        "seller": "Rohul Khan",
+        "published_date": "3 May ,2022",
+        "original_price": "5000",
+        "resale_price": "3000",
+        "used": "4 years",
+        "location": "Bandarban in Chittagong Division (Bangladesh)",
+        "description": "Modify bike Engine CDIModify bike Engine CDI3 hidrolaik brake, Samne 2 ta pechone 1 ta. Garite konu somossa nai. Apni chaile aro modify korte parben. ENGINE 150 CC."
+    }
+]
