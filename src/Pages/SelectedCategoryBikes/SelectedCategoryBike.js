@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import BookingModal from './BookingModal/BookingModal';
 
 const SelectedCategoryBike = ({ bike }) => {
+    const [booking, setBooking] = useState({ bike })
     const { description, location, img, original_price, published_date, resale_price, seller, title, used, category_id, _id, } = bike
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl mt-16">
@@ -18,7 +20,18 @@ const SelectedCategoryBike = ({ bike }) => {
                 <p className='text-info'>Published by : {seller}</p>
                 <p className='text-info'>used : {used}</p>
                 <div className="card-actions justify-start">
-                    <button className="btn btn-primary">Buy Now</button>
+
+                    <label
+                        htmlFor="booking-modal"
+                        className="btn btn-primary "
+                    > Book Now
+                    </label>
+                </div>
+                <div>
+                    {
+                        booking && <BookingModal setBooking={setBooking} bike={bike}></BookingModal>
+                    }
+
                 </div>
             </div>
         </div>

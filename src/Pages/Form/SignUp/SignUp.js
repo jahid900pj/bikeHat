@@ -24,15 +24,33 @@ const SignUp = () => {
 
                 updateUser(userInfo)
                     .then(() => {
-                        // saveUserDb(data.name, data.email)
-                        reset()
-                        navigate('/')
+                        saveUserDb(data.name, data.email, data.seller)
+
+                        // navigate('/')
                     })
                     .catch(err => { console.log(err) })
             })
             .catch(err => {
                 setSignupError(err.message)
                 console.log(err)
+            })
+    }
+
+    const saveUserDb = (name, email, seller) => {
+        const user = { name, email, seller }
+        fetch(`http://localhost:5000/users`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log('save user', data)
+                reset()
+                navigate('/')
+
             })
     }
 
@@ -73,6 +91,13 @@ const SignUp = () => {
                             pattern: { value: /(?=.*[A-Z].*[A-Z])/, message: 'password must have two uppercase' }
                         })} type="password" placeholder="Password" className="input input-bordered w-full max-w-xs" />
                     {errors.password && <p className='text-red-600' role="alert">{errors.password?.message}</p>}
+
+                    <label className="label cursor-pointer">
+                        <span className="label-text">Click for seller account</span>
+                        <input type="checkbox" {...register('seller', {})} className="checkbox checkbox-primary" />
+                    </label>
+
+
                     {signupError && <p className='text-red-600' role="alert">{signupError}</p>}
 
 

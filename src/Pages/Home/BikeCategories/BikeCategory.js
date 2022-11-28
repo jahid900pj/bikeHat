@@ -20,6 +20,8 @@ const BikeCategory = ({ bikeCategory }) => {
                     to={`/bikes/${category_id}`}>
                     Get Bikes
                 </Link>
+
+
             </div>
         </div>
 
