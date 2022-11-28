@@ -2,11 +2,14 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { AuthContext } from '../../../Context/AuthProvider';
+import useJwtToken from '../../../hooks/useJwtToken';
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const [loginError, setLoginError] = useState('')
     const { login } = useContext(AuthContext)
+    const [loginUserEmail, setLoginUserEmail] = useState('')
+    const [token] = useJwtToken(loginUserEmail)
 
     let navigate = useNavigate();
     let location = useLocation();
@@ -20,15 +23,19 @@ const Login = () => {
             .then((result) => {
                 const user = result.user;
                 // console.log(user)
-                // setLoginUserEmail(data.email)
-                reset()
-                navigate(from, { replace: true });
+                setLoginUserEmail(data.email)
+
+                // navigate(from, { replace: true });
 
             })
             .catch(err => {
                 console.log(err.message)
                 setLoginError(err.message)
             })
+    }
+
+    if (token) {
+        navigate(from, { replace: true });
     }
 
 

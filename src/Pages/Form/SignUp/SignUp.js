@@ -3,12 +3,16 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
+import useJwtToken from '../../../hooks/useJwtToken';
+
 
 const SignUp = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const [signupError, setSignupError] = useState('');
     const { createUser, updateUser } = useContext(AuthContext)
     const navigate = useNavigate()
+    const [createdUserEmail, setCreatedUserEmail] = useState('')
+    const [token] = useJwtToken(createdUserEmail)
 
     const handleSignup = data => {
         console.log(data)
@@ -25,13 +29,12 @@ const SignUp = () => {
                 updateUser(userInfo)
                     .then(() => {
                         saveUserDb(data.name, data.email, data.seller)
-
-                        // navigate('/')
                     })
                     .catch(err => { console.log(err) })
             })
             .catch(err => {
                 setSignupError(err.message)
+
                 console.log(err)
             })
     }
@@ -48,12 +51,17 @@ const SignUp = () => {
             .then(res => res.json())
             .then(data => {
                 console.log('save user', data)
+                setCreatedUserEmail(email)
                 reset()
-                navigate('/')
+
 
             })
     }
 
+
+    if (token) {
+        navigate('/')
+    }
     return (
         <div className='h-[800px] flex justify-center items-center '>
             <div className='w-96 p-7 rounded-md shadow-2xl'>
