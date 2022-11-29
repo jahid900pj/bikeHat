@@ -1,5 +1,4 @@
 [
-    "// https://cellbazaar.com/",
     {
         "category_id": "01",
         "title": "Ducati Panigale",
@@ -9,6 +8,8 @@
         "original_price": "2700",
         "resale_price": "2000",
         "used": "2 years",
+        "condition": "good",
+        "phoneNumber": "012345678",
         "location": "Khalishpur in Khulna City (Bangladesh)",
         "description": "Dayang Runner Bullet 100cc motorcycle ... Barisal er number ... 10 years papers kora (2014-2024) porjontto...self & kick start 2tai Hoi .... Digital number & smart card ace.... name change kora jabe ... 1 liter Tel a 55 km jai.... Call me"
     },
@@ -21,6 +22,8 @@
         "original_price": "3000",
         "resale_price": "2500",
         "used": "3 years",
+        "condition": "good",
+        "phoneNumber": "012345678",
         "location": "Khalishpur in Dhake City (Bangladesh)",
         "description": "Bike full fresh, time to time parts changed to ensure proper maintenance. Engine untouched. New exide stalk battery installed one month ago."
     },
@@ -33,6 +36,8 @@
         "original_price": "3000",
         "resale_price": "2000",
         "used": "1 years",
+        "condition": "good",
+        "phoneNumber": "012345678",
         "location": "Noakhali in Chittagong Division (Bangladesh)",
         "description": "Registration complete, tax/token cleared till 25/08/2025. No litigation. Completely finished. Interested candidates can contact. Along with accessories, you will get rider's accessories worth 5/6 thousand rupees (free). Contact: Raju Ahmed, Basurhat, Companyganj, Noakhali. "
     },
@@ -45,6 +50,8 @@
         "original_price": "4000",
         "resale_price": "3000",
         "used": "1 years",
+        "condition": "good",
+        "phoneNumber": "012345678",
         "location": "Noakhali in Chittagong Division (Bangladesh)",
         "description": "Bike full fresh, time to time parts changed to ensure proper maintenance. Engine untouched. New exide stalk battery installed one month ago. "
     },
@@ -57,6 +64,8 @@
         "original_price": "4000",
         "resale_price": "3000",
         "used": "1 years",
+        "condition": "good",
+        "phoneNumber": "012345678",
         "location": "Bandarban in Chittagong Division (Bangladesh)",
         "description": "Selling my 2019 Clean Raptor 700 SE Red,, Runs great, street tires and rims, mud tires and rims, nice pipe and chip, lots of power, and well kept. My bike is working perfectly"
     },
@@ -69,6 +78,8 @@
         "original_price": "5000",
         "resale_price": "3000",
         "used": "4 years",
+        "condition": "good",
+        "phoneNumber": "012345678",
         "location": "Bandarban in Chittagong Division (Bangladesh)",
         "description": "Modify bike Engine CDIModify bike Engine CDI3 hidrolaik brake, Samne 2 ta pechone 1 ta. Garite konu somossa nai. Apni chaile aro modify korte parben. ENGINE 150 CC."
     }
