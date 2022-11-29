@@ -3,11 +3,13 @@ import DashboardLayout from "../Layout/DashboardLayout";
 import Main from "../Layout/Main";
 import AddProduct from "../Pages/Dashboard/AddProduct/AddProduct";
 import MyOrders from "../Pages/Dashboard/MyOrders/MyOrders";
+import MyProducts from "../Pages/Dashboard/MyProducts/MyProducts";
 import Login from "../Pages/Form/Login/Login";
 import SignUp from "../Pages/Form/SignUp/SignUp";
 import Home from "../Pages/Home/Home/Home";
 import SelectedCategoryBikes from "../Pages/SelectedCategoryBikes/SelectedCategoryBikes";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import SellerRoute from "./PrivateRoute/SellerRoute";
 
 export const router = createBrowserRouter([
     {
@@ -36,7 +38,10 @@ export const router = createBrowserRouter([
                 path: '/dashboard', element: <MyOrders></MyOrders>
             },
             {
-                path: '/dashboard/addProduct', element: <AddProduct></AddProduct>
+                path: '/dashboard/addProduct', element: <SellerRoute><AddProduct></AddProduct></SellerRoute>
+            },
+            {
+                path: '/dashboard/myProducts', element: <SellerRoute><MyProducts></MyProducts></SellerRoute>
             }
         ]
     }

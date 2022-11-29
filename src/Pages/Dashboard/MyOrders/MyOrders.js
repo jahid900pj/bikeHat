@@ -18,7 +18,7 @@ const MyOrders = () => {
                 }
             })
             const data = await res.json()
-            console.log(data)
+            // console.log(data)
             return data
         }
     })
@@ -53,17 +53,7 @@ const MyOrders = () => {
                                     <td>{booking.MeetingLocation}</td>
                                     <td>{booking.sellerName}</td>
                                     <td> <button className="btn btn-sm btn-primary">Pay</button></td>
-                                    {/* <td>{booking.patientName}</td>
-                                    <td>{booking.treatment}</td>
-                                    <td>{booking.appointmentDate}</td>
-                                    <td>{booking.slot}</td>
-                                    <td>
-                                        {
-                                            booking.price && !booking.paid &&
-                                            <Link to={`/dashboard/payment/${booking._id}`}>
-                                                <button className="btn btn-sm btn-primary">Pay</button>
-                                            </Link>
-                                        }</td> */}
+
                                 </tr>
                             )
                         }
