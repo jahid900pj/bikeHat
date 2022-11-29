@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import moment from 'moment';
+import { AuthContext } from '../../../Context/AuthProvider';
+import toast from 'react-hot-toast';
 
 
 const AddProduct = () => {
+    const { user } = useContext(AuthContext)
     const { register, handleSubmit, formState: { errors } } = useForm();
 
 
@@ -35,12 +38,30 @@ const AddProduct = () => {
         const category_id = form.category.value;
         const description = form.description.value;
 
-        const addProduct = { title, img, seller, published_date, original_price, resale_price, used, condition, phoneNumber, location, category_id, description }
+        const addProduct = { title, img, seller, published_date, original_price, resale_price, used, condition, phoneNumber, location, category_id, description, email: user.email }
 
         console.log(addProduct)
 
+        fetch(`http://localhost:5000/addProduct`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(addProduct),
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.acknowledged) {
+                    // alert('Order place successfully')
+                    toast.success('Product add  successfully')
+                    form.reset()
+                }
+            })
+            .catch(error => console.log(error))
+
     }
-    const name2 = 'jahid'
+
 
     return (
         <div className='w-full p-7 rounded-md shadow-2xl mx-auto'>
@@ -66,7 +87,7 @@ const AddProduct = () => {
                         <label className="label">
                             <span className="label-text">Seller Name</span>
                         </label>
-                        <input name='sellerName' type="text" placeholder="seller name" className="input input-bordered w-full" />
+                        <input readOnly defaultValue={user?.displayName} name='sellerName' type="text" placeholder="seller name" className="input input-bordered w-full" />
                     </div>
 
                 </div>
@@ -129,7 +150,7 @@ const AddProduct = () => {
 
                     <div>
                         <label className="label">
-                            <span className="label-text">1:Cruiser, 2:Naked, 3:Sports (bike)</span>
+                            <span className="label-text">1:Sports, 2:Naked, 3:Cruiser (bike)</span>
                         </label>
                         <select name='category' className="select select-bordered w-full max-w-xs">
                             <option selected>01</option>

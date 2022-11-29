@@ -1,12 +1,16 @@
 import { useQuery } from '@tanstack/react-query';
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import BookingModal from './BookingModal/BookingModal';
 import SelectedCategoryBike from './SelectedCategoryBike';
 
 const SelectedCategoryBikes = () => {
+    const [booking, setBooking] = useState(null)
     const bikes = useLoaderData()
-    console.log(bikes)
-
+    // console.log(bikes)
+    function refreshPage() {
+        window.location.reload(false);
+    }
     return (
         <div className='max-w-[1340px] mx-auto'>
             <div className='gap-8'>
@@ -15,8 +19,17 @@ const SelectedCategoryBikes = () => {
                         <SelectedCategoryBike
                             key={bike._id}
                             bike={bike}
+                            setBooking={setBooking}
                         >
                         </SelectedCategoryBike>)
+                }
+                {
+                    <div>
+                        {
+                            booking && <BookingModal refreshPage={refreshPage} booking={booking}></BookingModal>
+                        }
+
+                    </div>
                 }
             </div>
         </div>
