@@ -38,21 +38,21 @@ const MyOrders = () => {
                             <th>Price</th>
                             <th>location</th>
                             <th>Seller</th>
-                            <th>Payment</th>
+                            <th>Delete</th>
 
                         </tr>
                     </thead>
                     <tbody>
 
                         {
-                            bookings.map((booking, i) =>
+                            bookings?.map((booking, i) =>
                                 <tr key={booking._id} className="hover">
                                     <th>{i + 1}</th>
                                     <td>{booking.bikeName}</td>
                                     <td>{booking.price}</td>
                                     <td>{booking.MeetingLocation}</td>
                                     <td>{booking.sellerName}</td>
-                                    <td> <button className="btn btn-sm btn-primary">Pay</button></td>
+                                    <td> <button className="btn btn-sm btn-primary">Delete</button></td>
 
                                 </tr>
                             )

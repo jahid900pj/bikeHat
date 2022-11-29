@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { AuthContext } from '../../../Context/AuthProvider';
 import useJwtToken from '../../../hooks/useJwtToken';
+import SocialLogin from '../SocalLogin/SocalLogin';
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -68,8 +69,7 @@ const Login = () => {
                 <p>New to Doctors Portal? <Link className='text-secondary' to='/signup'>Create new account</Link></p>
 
                 <div className="divider">OR</div>
-                <button className="btn btn-outline w-full max-w-xs ">CONTINUE WITH GOOGLE</button>
-
+                <SocialLogin></SocialLogin>
             </div>
         </div>
     );

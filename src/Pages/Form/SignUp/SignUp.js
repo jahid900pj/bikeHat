@@ -4,6 +4,7 @@ import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 import useJwtToken from '../../../hooks/useJwtToken';
+import SocialLogin from '../SocalLogin/SocalLogin';
 
 
 const SignUp = () => {
@@ -114,8 +115,7 @@ const SignUp = () => {
                 <p>Already have an account ?<Link className='text-secondary' to='/login'>login</Link></p>
 
                 <div className="divider">OR</div>
-                <button className="btn btn-outline w-full max-w-xs ">CONTINUE WITH GOOGLE</button>
-
+                <SocialLogin></SocialLogin>
             </div>
         </div>
     );
