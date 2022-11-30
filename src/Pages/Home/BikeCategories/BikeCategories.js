@@ -8,7 +8,7 @@ const BikeCategories = () => {
     const { data: bikeCategories = [], refetch, isLoading } = useQuery({
         queryKey: ['bikeCategories'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/bikeCategories`)
+            const res = await fetch(`https://server-side-assigment-12-jahid900pj.vercel.app/bikeCategories`)
             const data = await res.json()
             // console.log(data)
             return data

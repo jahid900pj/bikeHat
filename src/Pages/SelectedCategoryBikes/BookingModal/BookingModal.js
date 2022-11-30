@@ -2,7 +2,8 @@ import React, { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../../Context/AuthProvider';
 
-const BookingModal = ({ refreshPage, booking }) => {
+const BookingModal = ({ refreshPage, booking, setBooking }) => {
+    // setBooking={setBooking}
     const { user } = useContext(AuthContext)
     const { description, location, img, original_price, published_date, resale_price, seller, title, used, category_id, _id, } = booking
     console.log(booking)
@@ -24,7 +25,7 @@ const BookingModal = ({ refreshPage, booking }) => {
         }
         console.log(booking)
 
-        fetch('http://localhost:5000/bikeBooking', {
+        fetch('https://server-side-assigment-12-jahid900pj.vercel.app/bikeBooking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -51,6 +52,7 @@ const BookingModal = ({ refreshPage, booking }) => {
             <div className="modal">
                 <div className="modal-box relative">
                     <label
+                        onClick={() => setBooking(null)}
                         htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 className="text-lg font-bold mb-1">{title}</h3>
 
@@ -68,7 +70,7 @@ const BookingModal = ({ refreshPage, booking }) => {
 
                         <input type="text" placeholder="phone" name='phone' className="input input-bordered w-full" required />
 
-                        <input onClick={refreshPage} className='btn btn-primary input input-bordered w-full' type="submit" value="Submit" />
+                        <input className='btn btn-primary input input-bordered w-full' type="submit" value="Submit" />
                     </form>
                 </div>
             </div>

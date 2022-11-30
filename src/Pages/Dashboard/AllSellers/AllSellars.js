@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 import Loading from '../../Shared/Loading/Loading';
 
 const AllSellers = () => {
-    const uri = `http://localhost:5000/allSellers`
+    const uri = `https://server-side-assigment-12-jahid900pj.vercel.app/allSellers`
 
     const { data: allSellers = [], isLoading, refetch } = useQuery({
         queryKey: ['allSellers'],
@@ -21,7 +21,7 @@ const AllSellers = () => {
     })
 
     const handleMakeAdmin = (id) => {
-        fetch(`http://localhost:5000/users/admin/${id}`, {
+        fetch(`https://server-side-assigment-12-jahid900pj.vercel.app/users/admin/${id}`, {
             method: 'PUT',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -38,7 +38,7 @@ const AllSellers = () => {
     }
 
     const handleMakeVerify = (id) => {
-        fetch(`http://localhost:5000/users/verify/${id}`, {
+        fetch(`https://server-side-assigment-12-jahid900pj.vercel.app/users/verify/${id}`, {
             method: 'PUT',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -57,7 +57,7 @@ const AllSellers = () => {
 
     const handleDeleteBuyer = (seller) => {
         // console.log()
-        fetch(`http://localhost:5000/users/${seller._id}`, {
+        fetch(`https://server-side-assigment-12-jahid900pj.vercel.app/users/${seller._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

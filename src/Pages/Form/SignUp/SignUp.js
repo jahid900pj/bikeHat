@@ -42,7 +42,7 @@ const SignUp = () => {
 
     const saveUserDb = (name, email, seller) => {
         const user = { name, email, seller }
-        fetch(`http://localhost:5000/users`, {
+        fetch(`https://server-side-assigment-12-jahid900pj.vercel.app/users`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

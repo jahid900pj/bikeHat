@@ -10,7 +10,7 @@ const MyProducts = () => {
         queryKey: ['myProducts', user?.email],
         queryFn: async () => {
             try {
-                const res = await fetch(`http://localhost:5000/myProducts/${user?.email}`, {
+                const res = await fetch(`https://server-side-assigment-12-jahid900pj.vercel.app/myProducts/${user?.email}`, {
                     headers: {
                         authorization: `bearer ${localStorage.getItem('accessToken')}`
                     }
@@ -28,7 +28,7 @@ const MyProducts = () => {
 
     const handleDelete = (product) => {
         // console.log()
-        fetch(`http://localhost:5000/myProduct/${product._id}`, {
+        fetch(`https://server-side-assigment-12-jahid900pj.vercel.app/myProduct/${product._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

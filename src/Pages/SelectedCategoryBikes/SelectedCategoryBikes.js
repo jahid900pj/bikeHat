@@ -8,9 +8,9 @@ const SelectedCategoryBikes = () => {
     const [booking, setBooking] = useState(null)
     const bikes = useLoaderData()
 
-    function refreshPage() {
-        window.location.reload(false);
-    }
+    // function refreshPage() {
+    //     window.location.reload(false);
+    // }
     return (
         <div className='max-w-[1340px] mx-auto'>
             <div className='gap-8'>
@@ -27,7 +27,7 @@ const SelectedCategoryBikes = () => {
                 {
                     <div>
                         {
-                            booking && <BookingModal refreshPage={refreshPage} booking={booking}></BookingModal>
+                            booking && <BookingModal setBooking={setBooking} booking={booking}></BookingModal>
                         }
 
                     </div>

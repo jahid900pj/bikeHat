@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 import Loading from '../../Shared/Loading/Loading';
@@ -7,9 +8,9 @@ import Loading from '../../Shared/Loading/Loading';
 const MyOrders = () => {
     const { user } = useContext(AuthContext)
 
-    const uri = `http://localhost:5000/bikeBooking?email=${user?.email}`
+    const uri = `https://server-side-assigment-12-jahid900pj.vercel.app/bikeBooking?email=${user?.email}`
 
-    const { data: bookings = [], isLoading } = useQuery({
+    const { data: bookings = [], isLoading, refetch } = useQuery({
         queryKey: ['bookings', user?.email],
         queryFn: async () => {
             const res = await fetch(uri, {
@@ -22,6 +23,29 @@ const MyOrders = () => {
             return data
         }
     })
+
+
+    const handleDelete = (product) => {
+        // console.log()
+        fetch(`https://server-side-assigment-12-jahid900pj.vercel.app/bikeBooking/${product._id}`, {
+            method: 'DELETE',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+
+                if (data.deletedCount > 0) {
+                    refetch()
+                    toast.success(`${product.name} deleted  successfully`)
+
+                }
+
+            })
+
+    }
 
     if (isLoading) {
         return <Loading></Loading>
@@ -52,7 +76,7 @@ const MyOrders = () => {
                                     <td>{booking.price}</td>
                                     <td>{booking.MeetingLocation}</td>
                                     <td>{booking.sellerName}</td>
-                                    <td> <button className="btn btn-sm btn-primary">Delete</button></td>
+                                    <td> <button onClick={() => handleDelete(booking)} className="btn btn-sm btn-primary">Delete</button></td>
 
                                 </tr>
                             )

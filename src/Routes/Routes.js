@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/bikes/:id', element: <PrivateRoute><SelectedCategoryBikes></SelectedCategoryBikes></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/bikeCollections/${params.id}`)
+                loader: ({ params }) => fetch(`https://server-side-assigment-12-jahid900pj.vercel.app/bikeCollections/${params.id}`)
             },
             {
                 path: '/signup', element: <SignUp></SignUp>

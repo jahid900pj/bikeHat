@@ -29,7 +29,7 @@ const SocialLogin = () => {
     const saveUserDb = (name, email) => {
         const seller = false
         const user = { name, email, seller }
-        fetch(`http://localhost:5000/users`, {
+        fetch(`https://server-side-assigment-12-jahid900pj.vercel.app/users`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
