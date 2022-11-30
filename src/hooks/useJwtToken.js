@@ -15,6 +15,6 @@ const useJwtToken = email => {
                 })
         }
     }, [email])
-    return token
+    return [token]
 }
 export default useJwtToken;
