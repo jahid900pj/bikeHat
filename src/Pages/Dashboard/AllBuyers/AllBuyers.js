@@ -1,16 +1,19 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import toast from 'react-hot-toast';
 import Loading from '../../Shared/Loading/Loading';
 
 const AllBuyers = () => {
     // const { user } = useContext(AuthContext)
 
-    const uri = `http://localhost:5000/allBuyers`
+
+
+    // const uri = `http://localhost:5000/allBuyers`
 
     const { data: allBuyers = [], isLoading, refetch } = useQuery({
         queryKey: ['allBuyers'],
         queryFn: async () => {
-            const res = await fetch(uri, {
+            const res = await fetch(`http://localhost:5000/allBuyers`, {
                 headers: {
                     authorization: `bearer ${localStorage.getItem('accessToken')}`
                 }
@@ -20,6 +23,27 @@ const AllBuyers = () => {
             return data
         }
     })
+
+    const handleDeleteBuyer = (buyer) => {
+        // console.log()
+        fetch(`http://localhost:5000/users/${buyer._id}`, {
+            method: 'DELETE',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.deletedCount > 0) {
+                    refetch()
+                    toast.success(`${buyer.name} deleted  successfully`)
+
+                }
+
+            })
+
+    }
 
     if (isLoading) {
         return <Loading></Loading>
@@ -42,9 +66,10 @@ const AllBuyers = () => {
                             allBuyers.map((buyer, i) =>
                                 <tr key={buyer._id} className="hover">
                                     <th>{i + 1}</th>
+                                    {console.log('adsfdfjidjaj', buyer._id)}
                                     <td>{buyer.name}</td>
                                     <td>{buyer.email}</td>
-                                    <td> <button className="btn btn-sm btn-primary">Delete</button></td>
+                                    <td> <button onClick={() => handleDeleteBuyer(buyer)} className="btn btn-sm btn-primary">Delete</button></td>
                                 </tr>
                             )
                         }

@@ -33,6 +33,7 @@ const MyProducts = () => {
                             <th>Image</th>
                             <th>Bike Name</th>
                             <th>Price</th>
+                            <th>Pay</th>
                             <th>delete</th>
 
 
@@ -53,7 +54,8 @@ const MyProducts = () => {
                                     </td>
                                     <td>{product.title}</td>
                                     <td>$ {product.resale_price}</td>
-                                    <td> <button className="btn btn-sm btn-secondary">Delete</button></td>
+                                    <td> <button className="btn btn-sm btn-secondary">Pay</button></td>
+                                    <td> <button className="btn btn-sm btn-error">Delete</button></td>
                                     {/* <td>{product.bikeName}</td>
                                     <td>{product.price}</td>
                                     <td>{product.MeetingLocation}</td>
