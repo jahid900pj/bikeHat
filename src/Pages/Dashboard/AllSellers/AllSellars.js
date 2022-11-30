@@ -10,9 +10,9 @@ const AllSellers = () => {
         queryKey: ['allSellers'],
         queryFn: async () => {
             const res = await fetch(uri, {
-                // headers: {
-                //     authorization: `bearer ${localStorage.getItem('accessToken')}`
-                // }
+                headers: {
+                    authorization: `bearer ${localStorage.getItem('accessToken')}`
+                }
             })
             const data = await res.json()
             // console.log(data)

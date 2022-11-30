@@ -7,13 +7,14 @@ import SelectedCategoryBike from './SelectedCategoryBike';
 const SelectedCategoryBikes = () => {
     const [booking, setBooking] = useState(null)
     const bikes = useLoaderData()
-    // console.log(bikes)
+
     function refreshPage() {
         window.location.reload(false);
     }
     return (
         <div className='max-w-[1340px] mx-auto'>
             <div className='gap-8'>
+
                 {
                     bikes.map(bike =>
                         <SelectedCategoryBike

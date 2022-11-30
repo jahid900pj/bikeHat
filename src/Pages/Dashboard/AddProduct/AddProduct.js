@@ -4,12 +4,15 @@ import moment from 'moment';
 import { AuthContext } from '../../../Context/AuthProvider';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import useSeller from '../../../hooks/useSeller';
 
 
 const AddProduct = () => {
     const { user } = useContext(AuthContext)
     const { register, handleSubmit, formState: { errors } } = useForm();
     const navigate = useNavigate()
+    const [isVerify] = useSeller(user?.email)
+    console.log(isVerify)
 
 
 
@@ -40,7 +43,7 @@ const AddProduct = () => {
         const category_id = form.category.value;
         const description = form.description.value;
 
-        const addProduct = { title, img, seller, published_date, original_price, resale_price, used, condition, phoneNumber, location, category_id, description, email: user.email }
+        const addProduct = { title, img, seller, published_date, original_price, resale_price, used, condition, phoneNumber, location, category_id, description, email: user.email, verified: isVerify }
 
         console.log(addProduct)
 
@@ -156,7 +159,7 @@ const AddProduct = () => {
                             <span className="label-text">1:Sports, 2:Naked, 3:Cruiser (bike)</span>
                         </label>
                         <select name='category' className="select select-bordered w-full max-w-xs">
-                            <option selected>01</option>
+                            <option disabled selected>01</option>
                             <option>02</option>
                             <option>03</option>
                         </select>
