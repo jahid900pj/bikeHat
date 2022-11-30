@@ -36,7 +36,7 @@ const MyProducts = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
 
                 if (data.deletedCount > 0) {
                     refetch()
@@ -70,7 +70,7 @@ const MyProducts = () => {
                             myProducts.map((product, i) =>
                                 <tr key={product._id} className="hover">
                                     <th>{i + 1}</th>
-                                    {console.log(product._id)}
+                                    {/* {console.log(product._id)} */}
                                     <td>
                                         <div className="avatar">
                                             <div className="w-16 ring ring- secondary rounded-full">

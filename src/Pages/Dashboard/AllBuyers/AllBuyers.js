@@ -4,11 +4,6 @@ import toast from 'react-hot-toast';
 import Loading from '../../Shared/Loading/Loading';
 
 const AllBuyers = () => {
-    // const { user } = useContext(AuthContext)
-
-
-
-    // const uri = `http://localhost:5000/allBuyers`
 
     const { data: allBuyers = [], isLoading, refetch } = useQuery({
         queryKey: ['allBuyers'],

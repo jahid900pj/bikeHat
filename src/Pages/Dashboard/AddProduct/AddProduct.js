@@ -12,19 +12,8 @@ const AddProduct = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const navigate = useNavigate()
     const [isVerify] = useSeller(user?.email)
-    console.log(isVerify)
+    // console.log(isVerify)
 
-
-
-    // useEffect(() => {
-    //     let date = new Date().getDate;
-    //     let month = new Date().getMonth;
-    //     let years = new Date().getFullYear;
-
-    //     setCurrentDate(
-    //         date + '/' + month + '/' + years
-    //     )
-    // }, [])
 
     const handleAddProduct = (e) => {
         e.preventDefault()
@@ -45,18 +34,19 @@ const AddProduct = () => {
 
         const addProduct = { title, img, seller, published_date, original_price, resale_price, used, condition, phoneNumber, location, category_id, description, email: user.email, verified: isVerify }
 
-        console.log(addProduct)
+        // console.log(addProduct)
 
         fetch(`http://localhost:5000/addProduct`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
             },
             body: JSON.stringify(addProduct),
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 if (data.acknowledged) {
                     // alert('Order place successfully')
                     toast.success('Product add  successfully')
