@@ -9,6 +9,7 @@ import MyProducts from "../Pages/Dashboard/MyProducts/MyProducts";
 import Login from "../Pages/Form/Login/Login";
 import SignUp from "../Pages/Form/SignUp/SignUp";
 import Home from "../Pages/Home/Home/Home";
+import NotFound from "../Pages/NotFound/NotFound";
 import SelectedCategoryBikes from "../Pages/SelectedCategoryBikes/SelectedCategoryBikes";
 import AdminRoute from "./PrivateRoute/AdminRoute";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
@@ -53,6 +54,9 @@ export const router = createBrowserRouter([
                 path: '/dashboard/allBuyers', element: <AdminRoute><AllBuyers></AllBuyers></AdminRoute>
             }
         ]
+    },
+    {
+        path: '*', element: <NotFound></NotFound>
     }
 
 ])
