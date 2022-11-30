@@ -3,11 +3,13 @@ import { useForm } from 'react-hook-form';
 import moment from 'moment';
 import { AuthContext } from '../../../Context/AuthProvider';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 
 const AddProduct = () => {
     const { user } = useContext(AuthContext)
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const navigate = useNavigate()
 
 
 
@@ -56,6 +58,7 @@ const AddProduct = () => {
                     // alert('Order place successfully')
                     toast.success('Product add  successfully')
                     form.reset()
+                    navigate('/dashboard/myProducts')
                 }
             })
             .catch(error => console.log(error))

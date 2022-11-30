@@ -37,6 +37,23 @@ const AllSellers = () => {
             })
     }
 
+    const handleMakeVerify = (id) => {
+        fetch(`http://localhost:5000/users/verify/${id}`, {
+            method: 'PUT',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data)
+                if (data.modifiedCount) {
+                    toast.success('Verified successfully')
+                    refetch()
+                }
+            })
+    }
+
     if (isLoading) {
         return <Loading></Loading>
     }
@@ -49,6 +66,7 @@ const AllSellers = () => {
                             <th></th>
                             <th> Name</th>
                             <th>Email</th>
+                            <th>Verified</th>
                             <th>Admin</th>
                             <th>Delete</th>
                         </tr>
@@ -61,8 +79,16 @@ const AllSellers = () => {
                                     <th>{i + 1}</th>
                                     <td>{seller.name}</td>
                                     <td>{seller.email}</td>
+
+                                    <td>
+                                        {seller?.verified ? <button className="btn btn-sm btn-primary">Verified</button> :
+                                            <button onClick={() => handleMakeVerify(seller._id)} className="btn btn-sm btn-primary">Make Verify</button>
+                                        }
+                                    </td>
+
                                     <td>  {seller?.role ? <button className="btn btn-sm btn-secondary">Admin</button> : <button onClick={() => handleMakeAdmin(seller._id)} className="btn btn-sm btn-secondary">Make admin</button>}</td>
-                                    <td> <button className="btn btn-sm btn-primary">Delete</button></td>
+
+                                    <td> <button className="btn btn-sm btn-error">Delete</button></td>
                                 </tr>
                             )
                         }
