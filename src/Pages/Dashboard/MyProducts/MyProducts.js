@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { AuthContext } from '../../../Context/AuthProvider';
 
 const MyProducts = () => {
@@ -23,6 +24,31 @@ const MyProducts = () => {
             }
         }
     })
+
+
+    const handleDelete = (product) => {
+        // console.log()
+        fetch(`http://localhost:5000/myProduct/${product._id}`, {
+            method: 'DELETE',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+
+                if (data.deletedCount > 0) {
+                    refetch()
+                    toast.success(` deleted  successfully`)
+
+                }
+
+            })
+
+    }
+
+
     return (
         <div className='mt-10'>
             <div className="overflow-x-auto">
@@ -33,7 +59,6 @@ const MyProducts = () => {
                             <th>Image</th>
                             <th>Bike Name</th>
                             <th>Price</th>
-                            <th>Pay</th>
                             <th>delete</th>
 
 
@@ -45,6 +70,7 @@ const MyProducts = () => {
                             myProducts.map((product, i) =>
                                 <tr key={product._id} className="hover">
                                     <th>{i + 1}</th>
+                                    {console.log(product._id)}
                                     <td>
                                         <div className="avatar">
                                             <div className="w-16 ring ring- secondary rounded-full">
@@ -54,13 +80,8 @@ const MyProducts = () => {
                                     </td>
                                     <td>{product.title}</td>
                                     <td>$ {product.resale_price}</td>
-                                    <td> <button className="btn btn-sm btn-secondary">Pay</button></td>
-                                    <td> <button className="btn btn-sm btn-error">Delete</button></td>
-                                    {/* <td>{product.bikeName}</td>
-                                    <td>{product.price}</td>
-                                    <td>{product.MeetingLocation}</td>
-                                    <td>{product.sellerName}</td>
-                                    <td> <button className="btn btn-sm btn-primary">Pay</button></td> */}
+
+                                    <td> <button onClick={() => handleDelete(product)} className="btn btn-sm btn-error">Delete</button></td>
 
                                 </tr>
                             )

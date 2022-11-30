@@ -66,6 +66,7 @@ const AllSellers = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+
                 if (data.deletedCount > 0) {
                     refetch()
                     toast.success(`${seller.name} deleted  successfully`)
@@ -89,7 +90,7 @@ const AllSellers = () => {
                             <th> Name</th>
                             <th>Email</th>
                             <th>Verified</th>
-                            <th>Admin</th>
+                            {/* <th>Admin</th> */}
                             <th>Delete</th>
                         </tr>
                     </thead>
@@ -108,7 +109,7 @@ const AllSellers = () => {
                                         }
                                     </td>
 
-                                    <td>  {seller?.role ? <button className="btn btn-sm btn-secondary">Admin</button> : <button onClick={() => handleMakeAdmin(seller._id)} className="btn btn-sm btn-secondary">Make admin</button>}</td>
+                                    {/* <td>  {seller?.role ? <button className="btn btn-sm btn-secondary">Admin</button> : <button onClick={() => handleMakeAdmin(seller._id)} className="btn btn-sm btn-secondary">Make admin</button>}</td> */}
 
                                     <td> <button onClick={() => handleDeleteBuyer(seller)} className="btn btn-sm btn-error">Delete</button></td>
                                 </tr>

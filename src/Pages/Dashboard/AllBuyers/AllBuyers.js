@@ -38,7 +38,6 @@ const AllBuyers = () => {
                 if (data.deletedCount > 0) {
                     refetch()
                     toast.success(`${buyer.name} deleted  successfully`)
-
                 }
 
             })
