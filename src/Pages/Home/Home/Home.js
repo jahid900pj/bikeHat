@@ -7,6 +7,9 @@ import OSWAN from '../OSWAN/OSWAN';
 import BikeBlogs from '../BikeBlogs/BikeBlogs';
 import FAQ from '../FAQ/FAQ';
 import ACCESSORIES from '../ACCESSORIES/ACCESSORIES';
+import Review from '../Reivew/Review';
+import Subscribe from '../Subscribe/Subscribe';
+import BikeGallery from '../BikeGallery/BikeGallery';
 
 const Home = () => {
     return (
@@ -19,7 +22,9 @@ const Home = () => {
                 <BikeInfoCards></BikeInfoCards>
                 <ACCESSORIES></ACCESSORIES>
                 <BikeBlogs></BikeBlogs>
-
+                <Review></Review>
+                <BikeGallery></BikeGallery>
+                <Subscribe></Subscribe>
             </div>
             <FAQ></FAQ>
         </div>
