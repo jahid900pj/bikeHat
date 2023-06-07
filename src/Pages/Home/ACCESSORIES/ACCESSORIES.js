@@ -15,10 +15,10 @@ const ACCESSORIES = () => {
                     <a href="#">
                         <img class="w-100 mx-auto rounded-t-lg object-cover" src="https://htmldemo.net/oswan/oswan/assets/img/product/product-8.jpg" alt="product image" />
                     </a>
-                    <span class="absolute top-0 left-0 w-28 translate-y-4 -translate-x-6 -rotate-45 bg-black text-center text-sm text-white">Sale</span>
+                    <span class="absolute top-0 left-0 w-28 translate-y-4 -translate-x-6 -rotate-45 bg-primary text-center text-sm text-white">Sale</span>
                     <div class="mt-4 px-5 pb-5">
                         <a href="#">
-                            <h5 class="text-xl font-semibold tracking-tight text-slate-900">Nike Air MX Super 5000</h5>
+                            <h5 class="text-xl font-semibold tracking-tight text-slate-900">Aerion Carbon Helmet</h5>
                         </a>
                         <div class="mt-2.5 mb-5 flex items-center">
                             <span class="mr-2 rounded bg-yellow-200 px-2.5 py-0.5 text-xs font-semibold">5.0</span>
@@ -56,10 +56,10 @@ const ACCESSORIES = () => {
                     <a href="#">
                         <img class="w-100 mx-auto rounded-t-lg object-cover" src="https://htmldemo.net/oswan/oswan/assets/img/product/product-9.jpg" alt="product image" />
                     </a>
-                    <span class="absolute top-0 left-0 w-28 translate-y-4 -translate-x-6 -rotate-45 bg-black text-center text-sm text-white">Sale</span>
+                    <span class="absolute top-0 left-0 w-28 translate-y-4 -translate-x-6 -rotate-45 bg-primary text-center text-sm text-white">Sale</span>
                     <div class="mt-4 px-5 pb-5">
                         <a href="#">
-                            <h5 class="text-xl font-semibold tracking-tight text-slate-900">Nike Air MX Super 5000</h5>
+                            <h5 class="text-xl font-semibold tracking-tight text-slate-900">Reckles Jacket</h5>
                         </a>
                         <div class="mt-2.5 mb-5 flex items-center">
                             <span class="mr-2 rounded bg-yellow-200 px-2.5 py-0.5 text-xs font-semibold">5.0</span>
@@ -82,8 +82,8 @@ const ACCESSORIES = () => {
                         </div>
                         <div class="flex items-center justify-between">
                             <p>
-                                <span class="text-3xl font-bold text-slate-900">$249</span>
-                                <span class="text-sm text-slate-900 line-through">$299</span>
+                                <span class="text-3xl font-bold text-slate-900">$100</span>
+                                <span class="text-sm text-slate-900 line-through">$199</span>
                             </p>
                             <a href="#" class="flex items-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -98,10 +98,10 @@ const ACCESSORIES = () => {
                     <a href="#">
                         <img class=" w-100 mx-auto rounded-t-lg object-cover" src="https://htmldemo.net/oswan/oswan/assets/img/product/product-10.jpg" alt="product image" />
                     </a>
-                    <span class="absolute top-0 left-0 w-28 translate-y-4 -translate-x-6 -rotate-45 bg-black text-center text-sm text-white">Sale</span>
+                    <span class="absolute top-0 left-0 w-28 translate-y-4 -translate-x-6 -rotate-45 bg-primary text-center text-sm text-white">Sale</span>
                     <div class="mt-4 px-5 pb-5">
                         <a href="#">
-                            <h5 class="text-xl font-semibold tracking-tight text-slate-900">Nike Air MX Super 5000</h5>
+                            <h5 class="text-xl font-semibold tracking-tight text-slate-900">Softy Original Glove</h5>
                         </a>
                         <div class="mt-2.5 mb-5 flex items-center">
                             <span class="mr-2 rounded bg-yellow-200 px-2.5 py-0.5 text-xs font-semibold">5.0</span>
@@ -123,8 +123,8 @@ const ACCESSORIES = () => {
                         </div>
                         <div class="flex items-center justify-between">
                             <p>
-                                <span class="text-3xl font-bold text-slate-900">$249</span>
-                                <span class="text-sm text-slate-900 line-through">$299</span>
+                                <span class="text-3xl font-bold text-slate-900">$149</span>
+                                <span class="text-sm text-slate-900 line-through">$209</span>
                             </p>
                             <a href="#" class="flex items-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -139,10 +139,10 @@ const ACCESSORIES = () => {
                     <a href="#">
                         <img class="w-100 mx-auto rounded-t-lg object-cover" src="https://htmldemo.net/oswan/oswan/assets/img/product/product-7.jpg" alt="product image" />
                     </a>
-                    <span class="absolute top-0 left-0 w-28 translate-y-4 -translate-x-6 -rotate-45 bg-black text-center text-sm text-white">Sale</span>
+                    <span class="absolute top-0 left-0 w-28 translate-y-4 -translate-x-6 -rotate-45 bg-primary text-center text-sm text-white">Sale</span>
                     <div class="mt-4 px-5 pb-5">
                         <a href="#">
-                            <h5 class="text-xl font-semibold tracking-tight text-slate-900">Nike Air MX Super 5000</h5>
+                            <h5 class="text-xl font-semibold tracking-tight text-slate-900">Flicky Traco Boot</h5>
                         </a>
                         <div class="mt-2.5 mb-5 flex items-center">
                             <span class="mr-2 rounded bg-yellow-200 px-2.5 py-0.5 text-xs font-semibold">5.0</span>
@@ -164,7 +164,7 @@ const ACCESSORIES = () => {
                         </div>
                         <div class="flex items-center justify-between">
                             <p>
-                                <span class="text-3xl font-bold text-slate-900">$249</span>
+                                <span class="text-3xl font-bold text-slate-900">$209</span>
                                 <span class="text-sm text-slate-900 line-through">$299</span>
                             </p>
                             <a href="#" class="flex items-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">

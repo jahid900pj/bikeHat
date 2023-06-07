@@ -2,32 +2,38 @@ import React from 'react';
 
 const BikeGallery = () => {
     return (
-        <div class="max-w-screen-2xl mx-auto px-4 py-16 lg:py-24 relative bg-gray-50">
-            <div class="flex flex-col md:flex-row gap-2">
-                <div class="flex flex-1 flex-col gap-2">
-                    <div class="flex flex-1 flex-col">
-                        <img class="object-cover h-full" src="https://htmldemo.net/oswan/oswan/assets/img/banner/banner-2.png" />
-                    </div>
-                    <div class="hidden md:flex flex-1 flex-row gap-2">
+        <div>
+            <div>
+
+            </div>
+            <div class="max-w-screen-2xl mx-auto px-4 py-16 lg:py-24 relative bg-gray-50">
+                <h2 className='text-center text-4xl text-primary font-bold mb-16'>Bike Gallery</h2>
+                <div class="flex flex-col md:flex-row gap-2">
+                    <div class="flex flex-1 flex-col gap-2">
                         <div class="flex flex-1 flex-col">
-                            <img class="object-cover h-full" src="https://images.unsplash.com/photo-1666433723497-38d1d053185b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjY2NDEwNDU&ixlib=rb-4.0.3&q=80" />
+                            <img class="object-cover h-full" src="https://htmldemo.net/oswan/oswan/assets/img/banner/banner-2.png" />
                         </div>
-                        <div class="hidden md:flex flex-1 flex-col">
-                            <img class="object-cover h-full" src="https://images.unsplash.com/photo-1665048110211-91d0b74c421c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjY0NjAxMTY&ixlib=rb-4.0.3&q=80" />
+                        <div class="hidden md:flex flex-1 flex-row gap-2">
+                            <div class="flex flex-1 flex-col">
+                                <img class="object-cover h-full" src="https://htmldemo.net/oswan/oswan/assets/img/banner/banner-1.jpg" />
+                            </div>
+                            <div class="hidden md:flex flex-1 flex-col">
+                                <img class="object-cover h-full" src="https://htmldemo.net/oswan/oswan/assets/img/banner/banner-2.jpg" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="flex flex-1 flex-col gap-2">
-                    <div class="hidden md:flex flex-1 flex-row gap-2">
+                    <div class="flex flex-1 flex-col gap-2">
+                        <div class="hidden md:flex flex-1 flex-row gap-2">
+                            <div class="flex flex-1 flex-col">
+                                <img class="object-cover h-full" src="https://htmldemo.net/oswan/oswan/assets/img/banner/banner-3.jpg" />
+                            </div>
+                            <div class="hidden md:flex flex-1 flex-col">
+                                <img class="object-cover h-full" src="https://i.ibb.co/LYPDphf/naked-bike-2.jpg" />
+                            </div>
+                        </div>
                         <div class="flex flex-1 flex-col">
-                            <img class="object-cover h-full" src="https://images.unsplash.com/photo-1666297599033-09b318f2c8b5?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjY2NDExMjk&ixlib=rb-4.0.3&q=80" />
+                            <img class="object-cover h-full" src="https://htmldemo.net/oswan/oswan/assets/img/blog/blog-hm-3.jpg" />
                         </div>
-                        <div class="hidden md:flex flex-1 flex-col">
-                            <img class="object-cover h-full" src="https://images.unsplash.com/photo-1664713815297-9ce06950c022?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjY2NDEzMDc&ixlib=rb-4.0.3&q=80" />
-                        </div>
-                    </div>
-                    <div class="flex flex-1 flex-col">
-                        <img class="object-cover h-full" src="https://images.unsplash.com/photo-1666060519824-796d5638d809?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjY2NDExOTQ&ixlib=rb-4.0.3&q=80" />
                     </div>
                 </div>
             </div>

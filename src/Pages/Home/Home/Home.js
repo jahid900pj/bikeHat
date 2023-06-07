@@ -19,8 +19,9 @@ const Home = () => {
                 <OSWAN></OSWAN>
 
                 <BikeCategories></BikeCategories>
-                <BikeInfoCards></BikeInfoCards>
                 <ACCESSORIES></ACCESSORIES>
+                <BikeInfoCards></BikeInfoCards>
+
                 <BikeBlogs></BikeBlogs>
                 <Review></Review>
                 <BikeGallery></BikeGallery>
