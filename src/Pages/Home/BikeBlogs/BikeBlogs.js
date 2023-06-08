@@ -4,7 +4,7 @@ const BikeBlogs = () => {
     return (
         <section class="py-10">
             <h1 class="mb-12 text-center font-sans text-5xl font-bold mt-10">Our Blog</h1>
-            <div class="mx-auto grid max-w-screen-lg justify-center px-4 sm:grid-cols-2 sm:gap-4 sm:px-8 md:grid-cols-3">
+            <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-5 justify-items-center">
 
                 <article class="mx-auto my-4 flex w-full flex-col overflow-hidden rounded-2xl border border-gray-300 bg-white text-gray-900 transition hover:translate-y-2 hover:shadow-lg">
                     <a href="#">

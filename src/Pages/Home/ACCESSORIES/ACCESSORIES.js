@@ -10,7 +10,7 @@ const ACCESSORIES = () => {
             </div>
 
 
-            <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center'>
+            <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center'>
                 <div class="relative m-10 w-full max-w-xs overflow-hidden rounded-lg bg-white shadow-md">
                     <a href="#">
                         <img class="w-100 mx-auto rounded-t-lg object-cover" src="https://htmldemo.net/oswan/oswan/assets/img/product/product-8.jpg" alt="product image" />

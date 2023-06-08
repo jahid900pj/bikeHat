@@ -3,7 +3,7 @@ import React from 'react';
 const OSWAN = () => {
     return (
         <div className='mt-20'>
-            <div className='flex'>
+            <div className='flex px-5'>
                 <div className='basis-1/2'>
                     <h1 className='text-3xl'>
                         <span className='font-bold text-primary'>OSWAN</span> WORLD MOST <br />

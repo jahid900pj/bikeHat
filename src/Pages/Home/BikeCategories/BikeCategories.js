@@ -21,7 +21,7 @@ const BikeCategories = () => {
                 <h3 className='mb-6 text-center font-sans text-5xl font-bold text-primary'>Bikes Collections</h3>
                 <h2 className='text-3xl'>Bikes types We Provide</h2>
             </div>
-            <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center'>
+            <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center px-5'>
                 {
                     bikeCategories.map(bikeCategory =>
                         <BikeCategory

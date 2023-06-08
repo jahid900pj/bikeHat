@@ -15,7 +15,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <div className='max-w-[1240px] mx-auto'>
+            <div className='max-w-[1100px] mx-auto'>
                 <OSWAN></OSWAN>
 
                 <BikeCategories></BikeCategories>
